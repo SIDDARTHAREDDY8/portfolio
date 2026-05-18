@@ -1,8 +1,8 @@
-# 3D Developer Portfolio
+# Siddhartha Reddy Chinthala — Portfolio
 
-An immersive, interactive developer portfolio built with **Next.js 16**, **React Three Fiber**, and **Tailwind CSS v4**. Features a 3D mechanical keyboard hero scene, seasonal themes, smooth scroll animations, bilingual support (ES/EN), and a fully responsive design.
+An immersive, interactive developer portfolio built with **Next.js 16**, **React Three Fiber**, and **Tailwind CSS v4**. Features a 3D mechanical keyboard hero scene, seasonal themes, smooth scroll animations, and a fully responsive design.
 
-**[Live Demo](https://txemaalbero.com)** &nbsp;|&nbsp; **Built by [Txema Albero](https://es.linkedin.com/in/jose-mar%C3%ADa-albero-belamendia-b9319a246)**
+**[Live Site](https://siddarthareddy.com)** &nbsp;|&nbsp; **Built by [Siddhartha Reddy Chinthala](https://www.linkedin.com/in/siddarthareddy9/)**
 
 ---
 
@@ -11,11 +11,10 @@ An immersive, interactive developer portfolio built with **Next.js 16**, **React
 - **Interactive 3D Keyboard** — A full mechanical keyboard rendered with React Three Fiber and Three.js. Keys react to real keypresses with physics-based animations and sound effects.
 - **Seasonal Themes** — Four complete visual themes (Winter, Spring, Summer, Autumn) that re-skin the entire UI — colours, gradients, and 3D scene lighting — with a single click.
 - **Project Showcases** — Modal dialogs with image carousels, tech stack chips, and links to live demos and source code.
-- **Bilingual (ES/EN)** — Lightweight custom i18n layer with zero external dependencies. Language toggle persists across sections.
-- **Smooth Scroll & Reveal Animations** — Powered by [Lenis](https://github.com/darkroomengineering/lenis) for buttery smooth scrolling with intersection-observer-based reveal effects.
+- **Ambient Audio** — Forest ambience toggle for an immersive browsing experience.
+- **Smooth Scroll & Reveal Animations** — Powered by [Lenis](https://github.com/darkroomengineering/lenis) with intersection-observer-based reveal effects.
 - **Custom Cursor & Magnetic Targets** — A custom cursor that morphs on interactive elements, with magnetic snap behaviour on buttons.
 - **Responsive & Mobile-First** — Optimised for recruiters reviewing on phones. WebGL performance and touch interactions are first-class concerns.
-- **Security Headers** — HSTS, X-Frame-Options, Content-Type-Options, Referrer-Policy, and Permissions-Policy configured out of the box.
 
 ## Tech Stack
 
@@ -27,7 +26,7 @@ An immersive, interactive developer portfolio built with **Next.js 16**, **React
 | Scroll | [Lenis](https://github.com/darkroomengineering/lenis) |
 | Icons | [Simple Icons](https://simpleicons.org/) (tech logos on 3D keycaps) |
 | Language | TypeScript |
-| Deploy | Vercel / Docker |
+| Deploy | GitHub Pages |
 
 ## Getting Started
 
@@ -40,8 +39,8 @@ An immersive, interactive developer portfolio built with **Next.js 16**, **React
 
 ```bash
 # Clone the repository
-git clone https://github.com/Txemalon/3d-portfolio.git
-cd 3d-portfolio
+git clone https://github.com/SIDDARTHAREDDY8/portfolio.git
+cd portfolio
 
 # Install dependencies
 npm install
@@ -56,105 +55,60 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ```bash
 npm run build
-npm start
 ```
 
-### Docker
-
-The project includes a multi-stage Dockerfile optimised for production (standalone output, ~100 MB final image):
-
-```bash
-docker build -t 3d-portfolio .
-docker run -p 3000:3000 3d-portfolio
-```
+The static export is emitted to `./out` and served via GitHub Pages automatically on every push to `main`.
 
 ## Project Structure
 
 ```
 ├── app/
-│   ├── globals.css        # Tailwind + CSS custom properties (seasonal themes)
-│   ├── layout.tsx         # Root layout with providers
-│   └── page.tsx           # Home page with all sections
+│   ├── globals.css          # Tailwind + CSS custom properties (seasonal themes)
+│   ├── layout.tsx           # Root layout with providers
+│   └── page.tsx             # Home page — projects, experience, education, contact
 ├── components/
-│   ├── FrozenKeyboard.tsx # 3D keyboard scene (R3F)
+│   ├── FrozenKeyboard.tsx   # 3D keyboard scene (R3F) — 4×5 grid, 20 tech keys
 │   ├── FrozenBackground.tsx # Animated background particles
-│   ├── Carousel.tsx       # Image carousel for project modals
-│   ├── ProjectModal.tsx   # Fullscreen project detail dialog
-│   ├── SeasonProvider.tsx # Seasonal theme context
-│   ├── SeasonPicker.tsx   # Theme switcher UI
+│   ├── AmbientAudio.tsx     # Forest ambience toggle
+│   ├── Carousel.tsx         # Image carousel with browser mockup frames
+│   ├── ProjectModal.tsx     # Fullscreen project detail dialog
+│   ├── SeasonProvider.tsx   # Seasonal theme context
+│   ├── SeasonPicker.tsx     # Theme switcher UI
 │   ├── LanguageProvider.tsx # i18n context
-│   ├── LanguagePicker.tsx # Language toggle
-│   ├── CustomCursor.tsx   # Custom cursor with hover states
-│   ├── MagneticTargets.tsx# Magnetic snap on interactive elements
-│   ├── Reveal.tsx         # Scroll-triggered reveal animations
-│   ├── SectionNav.tsx     # Dot navigation sidebar
-│   ├── ScrollProgress.tsx # Scroll progress indicator
-│   ├── CopyEmail.tsx      # Copy-to-clipboard button
-│   └── smooth-scroll.tsx  # Lenis smooth scroll wrapper
+│   ├── LanguagePicker.tsx   # Language toggle
+│   ├── CustomCursor.tsx     # Custom cursor with hover states
+│   ├── MagneticTargets.tsx  # Magnetic snap on interactive elements
+│   ├── Reveal.tsx           # Scroll-triggered reveal animations
+│   ├── SectionNav.tsx       # Dot navigation sidebar
+│   ├── CopyEmail.tsx        # Copy-to-clipboard email button
+│   └── smooth-scroll.tsx    # Lenis smooth scroll wrapper
 ├── lib/
-│   ├── i18n.ts            # Bilingual dictionary (ES/EN)
-│   └── seasons.ts         # Season theme definitions
+│   ├── i18n.ts              # Bilingual dictionary (ES/EN)
+│   └── seasons.ts           # Season theme definitions
 ├── public/
-│   ├── fonts/             # 3D text typefaces
-│   ├── projects/          # Project screenshots
-│   └── sounds/            # Keyboard sound effects
-├── Dockerfile             # Multi-stage production build
-├── next.config.ts         # Standalone output + security headers
+│   ├── cv.pdf               # Resume
+│   ├── projects/            # Project screenshots
+│   └── sounds/              # Keyboard click sounds + ambient audio
+├── .github/workflows/
+│   └── deploy.yml           # GitHub Actions — build & deploy to Pages
+├── next.config.ts           # Static export config
 └── package.json
 ```
 
-## Customisation
+## Sections
 
-### Adding a Project
-
-Projects are defined in `app/page.tsx` in the `projects` array. Each entry supports:
-
-```typescript
-{
-  num: "05",
-  name: { es: "Mi Proyecto", en: "My Project" },
-  stack: ["Next.js", "TypeScript"],
-  desc: { es: "Descripción corta", en: "Short description" },
-  details: { es: "Descripción larga...", en: "Long description..." },
-  url: "https://myproject.com",          // optional — adds "View Site" button
-  github: "https://github.com/user/repo", // optional — adds "View Code" button
-  media: ["/projects/my-project/1.png"], // optional — carousel screenshots
-  highlights: ["nextdotjs", "typescript"], // simple-icons slugs for 3D keyboard
-  badge: { es: "En desarrollo", en: "In progress" }, // optional status badge
-  align: "left",                         // card alignment
-  section: "project5",                   // data attribute for scroll nav
-}
-```
-
-### Changing Themes
-
-Seasonal colour tokens are defined as CSS custom properties in `app/globals.css` under `[data-season="..."]` selectors. Edit or add new seasons there.
-
-### Translations
-
-All UI strings live in `lib/i18n.ts` as a flat dictionary with `{ es, en }` leaves. Add new keys or languages by extending the structure.
+- **Hero** — Name, role, resume download, contact and social links
+- **Tech Stack** — Interactive 3D keyboard with 20 technology keys (hover for tooltips)
+- **Experience** — DXC Technology · Digital Technology Solutions · Tata Consultancy Services
+- **Education** — MS Computer Science, University of Cincinnati (GPA 3.6)
+- **Projects** — Ohio Real Estate Intelligence · Expense Tracker · TalentAI
+- **Contact** — Email, GitHub, LinkedIn
 
 ## Deployment
 
-### Vercel (Recommended)
+Deployed automatically via GitHub Actions on every push to `main`. The workflow runs `npm run build`, exports the static site to `./out`, and publishes it to GitHub Pages.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Txemalon/3d-portfolio)
-
-### Docker / Self-Hosted
-
-The included `Dockerfile` produces a standalone Next.js image. Works with any container platform (Railway, Fly.io, Coolify, etc.):
-
-```bash
-docker build -t 3d-portfolio .
-docker run -p 3000:3000 3d-portfolio
-```
-
-## Performance
-
-- **Standalone output** — No `node_modules` in production; the Docker image is ~100 MB.
-- **Lazy loading** — Project screenshots use native lazy loading.
-- **Font optimisation** — Uses `next/font` for zero-layout-shift web fonts.
-- **Turbopack** — Sub-300ms dev server cold starts.
+Live at **[siddarthareddy.com](https://siddarthareddy.com)**
 
 ## License
 
@@ -162,8 +116,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-**Jose Maria Albero Belamendia (Txema)**
+**Siddhartha Reddy Chinthala**
 
-- [LinkedIn](https://es.linkedin.com/in/jose-mar%C3%ADa-albero-belamendia-b9319a246)
-- [GitHub](https://github.com/Txemalon)
-- [X / Twitter](https://x.com/Txemalon)
+- [Portfolio](https://siddarthareddy.com)
+- [LinkedIn](https://www.linkedin.com/in/siddarthareddy9/)
+- [GitHub](https://github.com/SIDDARTHAREDDY8)
+- [Email](mailto:siddarthareddychinthala@gmail.com)
