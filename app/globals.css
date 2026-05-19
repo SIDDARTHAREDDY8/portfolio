@@ -875,3 +875,40 @@ body {
 .ambient-btn--on {
   color: var(--ice-300);
 }
+
+/* ─── Mobile responsive overrides ───────────────────────────────────── */
+
+@media (max-width: 640px) {
+  /* Project modal — full-screen on mobile */
+  .project-modal {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .project-modal__dialog {
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+  .project-modal__body {
+    padding: 1.25rem 1.25rem 2rem;
+  }
+  .project-modal__media {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Experience / Education cards — tighten padding */
+  .frost-card-mobile {
+    padding: 1.25rem !important;
+  }
+
+  /* Frost buttons — slightly smaller on mobile */
+  .frost-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* Watermark numbers — smaller so they don't bleed */
+  .watermark {
+    font-size: clamp(6rem, 28vw, 14rem);
+  }
+}
