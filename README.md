@@ -1,8 +1,8 @@
-# Siddhartha Reddy Chinthala — Portfolio
+# Siddartha Reddy Chinthala — Portfolio
 
 An immersive, interactive developer portfolio built with **Next.js 16**, **React Three Fiber**, and **Tailwind CSS v4**. Features a 3D mechanical keyboard hero scene, seasonal themes, smooth scroll animations, and a fully responsive design.
 
-**[Live Site](https://siddarthareddy.com)** &nbsp;|&nbsp; **Built by [Siddhartha Reddy Chinthala](https://www.linkedin.com/in/siddarthareddy9/)**
+**[Live Site](https://siddarthareddy.com)** &nbsp;|&nbsp; **Built by [Siddartha Reddy Chinthala](https://www.linkedin.com/in/siddarthareddy9/)**
 
 ---
 
