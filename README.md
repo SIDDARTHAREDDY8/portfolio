@@ -116,7 +116,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-**Siddhartha Reddy Chinthala**
+**Siddartha Reddy Chinthala**
 
 - [Portfolio](https://siddarthareddy.com)
 - [LinkedIn](https://www.linkedin.com/in/siddarthareddy9/)

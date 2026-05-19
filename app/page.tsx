@@ -309,7 +309,7 @@ export default function Home() {
               data-cursor="hover"
               className="text-sm font-semibold tracking-tight text-ice-100"
             >
-              Siddhartha Reddy
+              Siddartha Reddy
             </span>
             <span className="status-pill hidden sm:inline-flex">
               {t("header.availability")}
@@ -350,7 +350,7 @@ export default function Home() {
                 {t("hero.greeting")}
               </p>
               <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-bold tracking-[-0.03em] text-ice-50 leading-[0.92] whitespace-nowrap">
-                <HeroWord text="Siddhartha" delay={120} />
+                <HeroWord text="Siddartha" delay={120} />
                 <br />
                 <HeroWord text="Reddy" delay={260} className="text-ice-400" />
               </h1>

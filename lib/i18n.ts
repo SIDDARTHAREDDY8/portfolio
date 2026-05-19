@@ -104,8 +104,8 @@ export const DICT = {
     linkedin: { es: "LinkedIn", en: "LinkedIn" },
     emailToast: { es: "Email copied", en: "Email copied" },
     footer: {
-      es: "© 2026 Siddhartha Reddy Chinthala. All rights reserved.",
-      en: "© 2026 Siddhartha Reddy Chinthala. All rights reserved.",
+      es: "© 2026 Siddartha Reddy Chinthala. All rights reserved.",
+      en: "© 2026 Siddartha Reddy Chinthala. All rights reserved.",
     },
   },
   keyboard: {

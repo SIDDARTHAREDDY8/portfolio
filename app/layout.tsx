@@ -23,12 +23,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Siddhartha Reddy Chinthala — Full Stack Developer",
+  title: "Siddartha Reddy Chinthala — Full Stack Developer",
   description:
-    "Portfolio of Siddhartha Reddy Chinthala — Full Stack Developer. Building scalable web experiences with React, Node.js, Python and AWS.",
-  authors: [{ name: "Siddhartha Reddy Chinthala" }],
+    "Portfolio of Siddartha Reddy Chinthala — Full Stack Developer. Building scalable web experiences with React, Node.js, Python and AWS.",
+  authors: [{ name: "Siddartha Reddy Chinthala" }],
   openGraph: {
-    title: "Siddhartha Reddy Chinthala — Full Stack Developer",
+    title: "Siddartha Reddy Chinthala — Full Stack Developer",
     description:
       "Interactive 3D portfolio. React, Next.js, Node.js, Python, AWS, Docker.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Siddhartha Reddy Chinthala — Full Stack Developer",
+    title: "Siddartha Reddy Chinthala — Full Stack Developer",
     description:
       "Interactive 3D portfolio. React, Next.js, Node.js, Python, AWS, Docker.",
   },
