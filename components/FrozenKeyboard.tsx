@@ -31,7 +31,7 @@ import {
   siLangchain,
   siLanggraph,
   siMlflow,
-  siNumpy,
+  siOpenjdk,
   siPostgresql,
   siPython,
   siPytorch,
@@ -45,6 +45,10 @@ import {
 // simple-icons ships the Anthropic "Claude" mark; relabel it to "Claude Code"
 // for the keycap hover title. Slug stays "claude" so the tagline lookup works.
 const siClaudeCode = { ...siClaude, title: "Claude Code" };
+
+// simple-icons dropped the Java mark (Oracle trademark); use the OpenJDK glyph
+// and relabel it "Java". Slug stays "openjdk" so the tagline lookup works.
+const siJava = { ...siOpenjdk, title: "Java" };
 
 const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 const subscribeMobile = () => () => {};
@@ -337,9 +341,9 @@ const FRAME_TARGET: [number, number, number] = [-1.0, 0, 0];
 type SkillIcon = { title: string; slug: string; path: string; hex: string };
 
 const SKILLS: readonly (readonly SkillIcon[])[] = [
-  [siJavascript, siTypescript, siReact, siPython, siFastapi],
+  [siJavascript, siTypescript, siPython, siJava, siReact],
   [siClaudeCode, siLangchain, siLanggraph, siHuggingface, siPytorch],
-  [siScikitlearn, siNumpy, siMlflow, siPostgresql, siRedis],
+  [siFastapi, siScikitlearn, siMlflow, siPostgresql, siRedis],
   [siDocker, siApachekafka, siTerraform, siGit, siGithubactions],
 ] as const;
 

@@ -134,9 +134,9 @@ export const DICT = {
         es: "The deep-learning framework behind the models.",
         en: "The deep-learning framework behind the models.",
       },
-      numpy: {
-        es: "The math under every ML pipeline.",
-        en: "The math under every ML pipeline.",
+      openjdk: {
+        es: "Enterprise backbone — Spring Boot services at scale.",
+        en: "Enterprise backbone — Spring Boot services at scale.",
       },
       postgresql: {
         es: "Relational rows and pgvector embeddings in one DB.",
