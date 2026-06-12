@@ -20,27 +20,31 @@ import { useSeason } from "@/components/SeasonProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import * as THREE from "three";
 import {
+  siApachekafka,
+  siClaude,
   siCss,
   siDocker,
-  siDjango,
-  siExpress,
   siFastapi,
   siGit,
   siGithubactions,
   siHtml5,
   siJavascript,
-  siMongodb,
-  siMysql,
+  siLangchain,
+  siMlflow,
   siNextdotjs,
   siNodedotjs,
-  siPandas,
   siPostgresql,
   siPython,
   siReact,
   siScikitlearn,
   siTailwindcss,
+  siTerraform,
   siTypescript,
 } from "simple-icons";
+
+// simple-icons ships the Anthropic "Claude" mark; relabel it to "Claude Code"
+// for the keycap hover title. Slug stays "claude" so the tagline lookup works.
+const siClaudeCode = { ...siClaude, title: "Claude Code" };
 
 const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 const subscribeMobile = () => () => {};
@@ -334,9 +338,9 @@ type SkillIcon = { title: string; slug: string; path: string; hex: string };
 
 const SKILLS: readonly (readonly SkillIcon[])[] = [
   [siJavascript, siTypescript, siHtml5, siCss, siTailwindcss],
-  [siPython, siReact, siNextdotjs, siNodedotjs, siExpress],
-  [siDjango, siFastapi, siMongodb, siPostgresql, siMysql],
-  [siDocker, siGit, siGithubactions, siScikitlearn, siPandas],
+  [siPython, siNodedotjs, siReact, siNextdotjs, siFastapi],
+  [siClaudeCode, siLangchain, siScikitlearn, siMlflow, siPostgresql],
+  [siDocker, siApachekafka, siTerraform, siGit, siGithubactions],
 ] as const;
 
 const COLS = 5;

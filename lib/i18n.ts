@@ -158,25 +158,29 @@ export const DICT = {
         es: "History and a time machine for your code.",
         en: "History and a time machine for your code.",
       },
-      express: {
-        es: "Node.js, minus the boilerplate.",
-        en: "Node.js, minus the boilerplate.",
-      },
-      django: {
-        es: "Batteries included. Ships fast.",
-        en: "Batteries included. Ships fast.",
-      },
       fastapi: {
         es: "Python APIs at machine speed.",
         en: "Python APIs at machine speed.",
       },
-      mongodb: {
-        es: "Documents, not rows.",
-        en: "Documents, not rows.",
+      claude: {
+        es: "My pair-programmer for shipping AI features.",
+        en: "My pair-programmer for shipping AI features.",
       },
-      mysql: {
-        es: "Relational. Reliable. Everywhere.",
-        en: "Relational. Reliable. Everywhere.",
+      langchain: {
+        es: "Wiring LLMs into real agent pipelines.",
+        en: "Wiring LLMs into real agent pipelines.",
+      },
+      mlflow: {
+        es: "Track, version, and ship models with confidence.",
+        en: "Track, version, and ship models with confidence.",
+      },
+      apachekafka: {
+        es: "Events flowing between services, at scale.",
+        en: "Events flowing between services, at scale.",
+      },
+      terraform: {
+        es: "Infrastructure as code, reproducible every time.",
+        en: "Infrastructure as code, reproducible every time.",
       },
       githubactions: {
         es: "Push code, ship product.",
@@ -185,10 +189,6 @@ export const DICT = {
       scikitlearn: {
         es: "ML that just works.",
         en: "ML that just works.",
-      },
-      pandas: {
-        es: "Data wrangling in Python.",
-        en: "Data wrangling in Python.",
       },
     },
   },
