@@ -24,7 +24,14 @@ type Localised = { es: string; en: string };
 
 type Project = ProjectDetail & {
   align: "left" | "right";
-  section: "project1" | "project2" | "project3" | "project4";
+  section:
+    | "project1"
+    | "project2"
+    | "project3"
+    | "project4"
+    | "project5"
+    | "project6"
+    | "project7";
 };
 
 const projects: Project[] = [
@@ -136,6 +143,137 @@ const projects: Project[] = [
     highlights: ["react", "python", "postgresql", "nodedotjs"],
     align: "left",
     section: "project3",
+  },
+  {
+    num: "04",
+    name: {
+      es: "Ohio Credit Intelligence",
+      en: "Ohio Credit Intelligence",
+    },
+    stack: [
+      "Python",
+      "FastAPI",
+      "LightGBM",
+      "SHAP",
+      "MLflow",
+      "dbt",
+      "PostgreSQL",
+      "React 18",
+      "TypeScript",
+      "Claude API",
+      "Docker",
+      "AWS",
+      "GitHub Actions",
+    ],
+    desc: {
+      es: "Production-style AI credit-risk scoring for regional banks — automated loan decisions, SHAP explainability, and ECOA-compliant adverse-action notices, on a full data + MLOps stack.",
+      en: "Production-style AI credit-risk scoring for regional banks — automated loan decisions, SHAP explainability, and ECOA-compliant adverse-action notices, on a full data + MLOps stack.",
+    },
+    details: {
+      es: "An applicant's loan request goes in; a calibrated risk decision comes out with a full audit trail. A LightGBM model trained on 2.26M real LendingClub loans produces a 0–100 risk score across 5 tiers; SHAP explains exactly which factors moved the score; and on a decline the Claude API writes a plain-English, ECOA/FCRA-compliant adverse-action letter — code-validated against guardrails with a deterministic fallback so a credit decision never fails if generation hiccups. A fairness layer audits disparate impact against Ohio HMDA data using the CFPB 4/5ths rule, and weekly PSI tracks drift. Data flows through PostgreSQL + dbt marts; models are versioned in an MLflow registry with a champion alias and an AUC promotion gate. The 3-page React/TypeScript dashboard logs every decision, and GitHub Actions deploys to AWS EC2 + RDS + ECR via keyless OIDC auth — 67 unit tests, 27 dbt tests, plus a Claude notice-compliance eval harness.",
+      en: "An applicant's loan request goes in; a calibrated risk decision comes out with a full audit trail. A LightGBM model trained on 2.26M real LendingClub loans produces a 0–100 risk score across 5 tiers; SHAP explains exactly which factors moved the score; and on a decline the Claude API writes a plain-English, ECOA/FCRA-compliant adverse-action letter — code-validated against guardrails with a deterministic fallback so a credit decision never fails if generation hiccups. A fairness layer audits disparate impact against Ohio HMDA data using the CFPB 4/5ths rule, and weekly PSI tracks drift. Data flows through PostgreSQL + dbt marts; models are versioned in an MLflow registry with a champion alias and an AUC promotion gate. The 3-page React/TypeScript dashboard logs every decision, and GitHub Actions deploys to AWS EC2 + RDS + ECR via keyless OIDC auth — 67 unit tests, 27 dbt tests, plus a Claude notice-compliance eval harness.",
+    },
+    url: "http://3.23.217.230:3000",
+    github: "https://github.com/SIDDARTHAREDDY8/ohio-credit-intelligence",
+    highlights: ["python", "fastapi", "postgresql", "docker"],
+    align: "right",
+    section: "project4",
+  },
+  {
+    num: "05",
+    name: {
+      es: "FinCore AI",
+      en: "FinCore AI",
+    },
+    stack: [
+      "Next.js 14",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "Spring Boot",
+      "Java",
+      "LangGraph",
+      "Claude API",
+      "OpenAI Embeddings",
+      "pgvector",
+      "Apache Kafka",
+      "PostgreSQL",
+      "Redis",
+      "Terraform",
+    ],
+    desc: {
+      es: "Personal-finance platform built as a microservices system — three backend services over Kafka, a LangGraph RAG agent that answers questions about your spending, and a UI that makes the AI internals visible.",
+      en: "Personal-finance platform built as a microservices system — three backend services over Kafka, a LangGraph RAG agent that answers questions about your spending, and a UI that makes the AI internals visible.",
+    },
+    details: {
+      es: "Three backend services (a FastAPI core API, a FastAPI/LangGraph AI service, and a Spring Boot ingestion service) communicate over Apache Kafka. Bank transactions flow in via Plaid sandbox, are embedded with OpenAI text-embedding-3-small, and stored in pgvector. A 3-node LangGraph pipeline (retrieve → analyze → generate) answers plain-English questions with Claude, grounded in your own transaction history via RAG — with automatic PostgreSQL full-text-search fallback when no embeddings exist. The frontend exposes the AI internals: per-node execution-trace timing and the exact retrieved documents with their similarity scores and retrieval method. Auth is bcrypt + JWT (access/refresh) plus Google OAuth; nginx uses dynamic DNS resolution to survive container restarts; infra is Terraform (ECS Fargate, RDS, ElastiCache, MSK, ECR). 67 tests across all three services.",
+      en: "Three backend services (a FastAPI core API, a FastAPI/LangGraph AI service, and a Spring Boot ingestion service) communicate over Apache Kafka. Bank transactions flow in via Plaid sandbox, are embedded with OpenAI text-embedding-3-small, and stored in pgvector. A 3-node LangGraph pipeline (retrieve → analyze → generate) answers plain-English questions with Claude, grounded in your own transaction history via RAG — with automatic PostgreSQL full-text-search fallback when no embeddings exist. The frontend exposes the AI internals: per-node execution-trace timing and the exact retrieved documents with their similarity scores and retrieval method. Auth is bcrypt + JWT (access/refresh) plus Google OAuth; nginx uses dynamic DNS resolution to survive container restarts; infra is Terraform (ECS Fargate, RDS, ElastiCache, MSK, ECR). 67 tests across all three services.",
+    },
+    github: "https://github.com/SIDDARTHAREDDY8/fincore-ai",
+    highlights: ["python", "fastapi", "nextdotjs", "postgresql"],
+    align: "left",
+    section: "project5",
+  },
+  {
+    num: "06",
+    name: {
+      es: "Kisaan AI",
+      en: "Kisaan AI",
+    },
+    stack: [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "Claude API",
+      "HuggingFace",
+      "MobileNetV2",
+      "Whisper",
+      "NLLB-200",
+      "pgvector",
+      "PostgreSQL",
+      "React 18",
+      "TypeScript",
+      "Twilio",
+    ],
+    desc: {
+      es: "Autonomous multimodal farm intelligence for Indian smallholder farmers — crop disease diagnosis, live mandi prices, scheme guidance, soil analysis, and multilingual voice advisory, via web or WhatsApp.",
+      en: "Autonomous multimodal farm intelligence for Indian smallholder farmers — crop disease diagnosis, live mandi prices, scheme guidance, soil analysis, and multilingual voice advisory, via web or WhatsApp.",
+    },
+    details: {
+      es: "A LangGraph stateful DAG routes each input (photo, text, voice, or WhatsApp message) to the right agent via zero-shot classification + NER. MobileNetV2 classifies 38 diseases across 14 crops behind a confidence gate, then Claude writes the treatment plan. Other agents handle live Agmarknet mandi prices with sell-window advice, RAG-based government-scheme navigation (PM-KISAN, PMFBY, KCC) over pgvector, and tabular soil-health scoring. A full voice path runs Whisper ASR → NLLB-200 translation → advisory → MMS TTS, replying in the farmer's own language across Hindi, Telugu, Tamil, Marathi, Kannada, and Bengali. Claude calls use prompt caching (~90% cost cut on hits) and per-session cost tracking; the WhatsApp bot uses a two-phase response to beat Twilio webhook timeouts. Backed by an eval harness gating precision, latency, and severity accuracy.",
+      en: "A LangGraph stateful DAG routes each input (photo, text, voice, or WhatsApp message) to the right agent via zero-shot classification + NER. MobileNetV2 classifies 38 diseases across 14 crops behind a confidence gate, then Claude writes the treatment plan. Other agents handle live Agmarknet mandi prices with sell-window advice, RAG-based government-scheme navigation (PM-KISAN, PMFBY, KCC) over pgvector, and tabular soil-health scoring. A full voice path runs Whisper ASR → NLLB-200 translation → advisory → MMS TTS, replying in the farmer's own language across Hindi, Telugu, Tamil, Marathi, Kannada, and Bengali. Claude calls use prompt caching (~90% cost cut on hits) and per-session cost tracking; the WhatsApp bot uses a two-phase response to beat Twilio webhook timeouts. Backed by an eval harness gating precision, latency, and severity accuracy.",
+    },
+    github: "https://github.com/SIDDARTHAREDDY8/kisaan-ai",
+    highlights: ["python", "fastapi", "react", "postgresql"],
+    align: "right",
+    section: "project6",
+  },
+  {
+    num: "07",
+    name: {
+      es: "JobsBuddy",
+      en: "JobsBuddy",
+    },
+    stack: [
+      "Python",
+      "GitHub Actions",
+      "HTML5",
+      "JavaScript",
+      "GitHub Pages",
+    ],
+    desc: {
+      es: "A visa-sponsoring tech-job board for international students — a free Python scraper that surfaces only US, OPT-friendly, early-career roles at companies with real H1B sponsorship history.",
+      en: "A visa-sponsoring tech-job board for international students — a free Python scraper that surfaces only US, OPT-friendly, early-career roles at companies with real H1B sponsorship history.",
+    },
+    details: {
+      es: "Built to fix the worst part of the international job hunt: applying, then learning the company won't sponsor. A free Python scraper runs on GitHub Actions every 6 hours, pulling from public ATS feeds (Greenhouse, Lever, Ashby, Workday) and keeping only roles that matter — companies with a real H1B filing history, US-based, no security clearance, early-career (0–3 years). Each role is scored for fit against a candidate profile (a Match %) and tagged with the company's sponsorship tier and filing count. Results publish to a static, searchable GitHub Pages job board — newest first, Apply opens in a new tab — with 1,100+ roles tracked and hundreds open at any time. No paid APIs, no signups, no paywalls.",
+      en: "Built to fix the worst part of the international job hunt: applying, then learning the company won't sponsor. A free Python scraper runs on GitHub Actions every 6 hours, pulling from public ATS feeds (Greenhouse, Lever, Ashby, Workday) and keeping only roles that matter — companies with a real H1B filing history, US-based, no security clearance, early-career (0–3 years). Each role is scored for fit against a candidate profile (a Match %) and tagged with the company's sponsorship tier and filing count. Results publish to a static, searchable GitHub Pages job board — newest first, Apply opens in a new tab — with 1,100+ roles tracked and hundreds open at any time. No paid APIs, no signups, no paywalls.",
+    },
+    url: "https://siddarthareddy8.github.io/JobsBuddy/",
+    github: "https://github.com/SIDDARTHAREDDY8/JobsBuddy",
+    highlights: ["python", "githubactions", "javascript", "html5"],
+    align: "left",
+    section: "project7",
   },
 ];
 
