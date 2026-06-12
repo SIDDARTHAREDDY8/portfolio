@@ -118,18 +118,6 @@ export const DICT = {
         es: "Same JS, with a seatbelt.",
         en: "Same JS, with a seatbelt.",
       },
-      html5: {
-        es: "The bones of any page.",
-        en: "The bones of any page.",
-      },
-      css: {
-        es: "What separates good from beautiful.",
-        en: "What separates good from beautiful.",
-      },
-      tailwindcss: {
-        es: "Utility-first. Design inside the HTML.",
-        en: "Utility-first. Design inside the HTML.",
-      },
       python: {
         es: "Reads like English, scales like a rocket.",
         en: "Reads like English, scales like a rocket.",
@@ -138,17 +126,25 @@ export const DICT = {
         es: "Components, components, components.",
         en: "Components, components, components.",
       },
-      nextdotjs: {
-        es: "React all grown up: routing, SSR, edge.",
-        en: "React all grown up: routing, SSR, edge.",
+      huggingface: {
+        es: "Pretrained models for vision, speech, and NLP.",
+        en: "Pretrained models for vision, speech, and NLP.",
       },
-      nodedotjs: {
-        es: "JavaScript on the server.",
-        en: "JavaScript on the server.",
+      pytorch: {
+        es: "The deep-learning framework behind the models.",
+        en: "The deep-learning framework behind the models.",
+      },
+      numpy: {
+        es: "The math under every ML pipeline.",
+        en: "The math under every ML pipeline.",
       },
       postgresql: {
-        es: "The boring database that always works.",
-        en: "The boring database that always works.",
+        es: "Relational rows and pgvector embeddings in one DB.",
+        en: "Relational rows and pgvector embeddings in one DB.",
+      },
+      redis: {
+        es: "In-memory speed for caching and sessions.",
+        en: "In-memory speed for caching and sessions.",
       },
       docker: {
         es: "Same on my machine, same in production.",
@@ -169,6 +165,10 @@ export const DICT = {
       langchain: {
         es: "Wiring LLMs into real agent pipelines.",
         en: "Wiring LLMs into real agent pipelines.",
+      },
+      langgraph: {
+        es: "Stateful, multi-step agent graphs you can trace.",
+        en: "Stateful, multi-step agent graphs you can trace.",
       },
       mlflow: {
         es: "Track, version, and ship models with confidence.",

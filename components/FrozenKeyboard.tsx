@@ -22,22 +22,22 @@ import * as THREE from "three";
 import {
   siApachekafka,
   siClaude,
-  siCss,
   siDocker,
   siFastapi,
   siGit,
   siGithubactions,
-  siHtml5,
+  siHuggingface,
   siJavascript,
   siLangchain,
+  siLanggraph,
   siMlflow,
-  siNextdotjs,
-  siNodedotjs,
+  siNumpy,
   siPostgresql,
   siPython,
+  siPytorch,
   siReact,
+  siRedis,
   siScikitlearn,
-  siTailwindcss,
   siTerraform,
   siTypescript,
 } from "simple-icons";
@@ -337,9 +337,9 @@ const FRAME_TARGET: [number, number, number] = [-1.0, 0, 0];
 type SkillIcon = { title: string; slug: string; path: string; hex: string };
 
 const SKILLS: readonly (readonly SkillIcon[])[] = [
-  [siJavascript, siTypescript, siHtml5, siCss, siTailwindcss],
-  [siPython, siNodedotjs, siReact, siNextdotjs, siFastapi],
-  [siClaudeCode, siLangchain, siScikitlearn, siMlflow, siPostgresql],
+  [siJavascript, siTypescript, siReact, siPython, siFastapi],
+  [siClaudeCode, siLangchain, siLanggraph, siHuggingface, siPytorch],
+  [siScikitlearn, siNumpy, siMlflow, siPostgresql, siRedis],
   [siDocker, siApachekafka, siTerraform, siGit, siGithubactions],
 ] as const;
 
